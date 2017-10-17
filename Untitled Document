@@ -1,0 +1,16 @@
+import { mount } from 'vue-test-utils'
+import HelloWorld from '@/src/components/HelloWorld'
+
+describe('HelloWorld', () => {
+    // Now mount the component and you have the wrapper
+    const wrapper = mount(HelloWorld)
+    it('renders the correct markup', () => {
+      expect(wrapper.html()).toContain('<header><slot name="header"></slot></header>')
+    })
+  
+    // it's also easy to check for the existence of elements
+    // it('has a button', () => {
+    //   expect(wrapper.contains('button')).toBe(true)
+    // })
+  })
+  
